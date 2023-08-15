@@ -5,6 +5,7 @@ export const api = axios.create({
 })
 
 export const buscar = async (url, setData) => {
+    // json-server --watch .\db.json --port=5
     const respuesta = await api.get(url);
     console.log(respuesta);
     setData(respuesta.data);
